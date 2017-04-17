@@ -1,0 +1,108 @@
+<header class="app-header navbar">
+  <a class="navbar-brand" href="#"><i class="fa fa-eercast" aria-hidden="true"></i><span>Platform Adapter</span></a>
+  <ul class="nav navbar-nav hidden-md-down">
+    <li class="nav-item">
+      Platform
+    </li>
+    <li class="nav-item">
+      Lookup
+    </li>
+    <li class="nav-item">
+      Configuration
+    </li>
+  </ul>
+</header>
+
+<div class="app-body">
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/']"> General </a>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" routerLinkActive="active" [routerLink]="['/mws']"> Module MWS </a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/mws/general']"> General </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/mws/methods']"> Methods </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/mws/zones']"> Zones </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/mws/accounts']"> Accounts </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" routerLinkActive="active" [routerLink]="['/aws']"> Module AWS </a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/aws/general']"> General </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/aws/methods']"> Methods </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/aws/zones']"> Zones </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/aws/accounts']"> Accounts </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" routerLinkActive="active" [routerLink]="['/fba']"> Module FBA </a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/fba/general']"> General </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/fba/methods']"> Methods </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/fba/zones']"> Zones </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/fba/accounts']"> Accounts </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" routerLinkActive="active" [routerLink]="['/sqs']"> Module SQS-Forwarder </a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/sqs/general']"> General </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/sqs/methods']"> Methods </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/sqs/zones']"> Zones </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/sqs/accounts']"> Accounts </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- Breadcrumb -->
+    <!--<ol class="breadcrumb">-->
+      <!--<breadcrumbs></breadcrumbs>-->
+    <!--</ol>-->
+
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.conainer-fluid -->
+  </main>
+</div>

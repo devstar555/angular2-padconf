@@ -1,0 +1,14 @@
+angular/build:
+  cached: true
+  build:
+    dockerfile_path: Dockerfile.build
+    image: padconf-ui-build
+  volumes:
+    - .:/mnt
+
+angular/package:
+  build:
+    image: padconf-ui-app
+    dockerfile_path: Dockerfile.package
+  volumes:
+    - .:/mnt

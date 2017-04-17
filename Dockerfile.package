@@ -1,0 +1,12 @@
+FROM kanduat/alpine3.4-consul-nginx
+MAINTAINER Dominik Bieringer <d.bieringer@dodax.com>
+
+ENV APPLICATION=padconf-ui
+RUN echo "{\"service\": {\"name\": \"$APPLICATION\", \"port\": 8090}}" > /etc/consul.d/service.json
+ENV CONSUL_SERVICE="nginx"
+EXPOSE 8090
+
+ENV API_URL='http://172.17.0.1:8080/api'
+RUN echo 'sed -i "s#%API_URL%#$API_URL#g" /etc/nginx/conf.d/default.conf' >/usr/bin/hook_root
+COPY ./dist /usr/share/nginx/html
+COPY ./nginx.default.conf /etc/nginx/conf.d/default.conf

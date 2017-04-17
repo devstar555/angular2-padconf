@@ -1,0 +1,6 @@
+ - name: build
+   service: angular/build
+   command: ng build --prod
+ - name: package
+   service: angular/package
+   command: /bin/true
